@@ -1,0 +1,59 @@
+{
+  "name": "tynk",
+  "version": "0.0.1",
+  "description": "Tynk chrome browser extension",
+  "main": "dist/index.tsx",
+  "type": "module",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "test": "test",
+    "lint": "eslint",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bx7kvs/tynk.git"
+  },
+  "keywords": [
+    "extension",
+    "chrome",
+    "homescreen"
+  ],
+  "author": "Viktar Chadasievič",
+  "license": "SEE LICENCE IN <LICENCE>",
+  "bugs": {
+    "url": "https://github.com/bx7kvs/tynk/issues"
+  },
+  "homepage": "https://github.com/bx7kvs/tynk#readme",
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "nanoid": "^5.0.9",
+    "react": "^19.0.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
+    "styled-components": "^6.1.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@eslint/js": "^9.18.0",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "babel-loader": "^9.2.1",
+    "eslint": "^9.18.0",
+    "eslint-plugin-react": "^7.37.4",
+    "file-loader": "^6.2.0",
+    "globals": "^15.14.0",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
