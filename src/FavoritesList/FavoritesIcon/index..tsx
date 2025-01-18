@@ -1,9 +1,9 @@
-import {css} from "styled-components";
+import {css} from "@linaria/core";
 import {FavoritesItem} from "@root/FavoritesList/FavoritesIcon/types";
 import {useDrag} from "react-dnd";
-import classNames from "classnames";
 import {useEffect} from "react";
 import {useFavorites} from "@root/FavoritesList/reducer";
+import classNames from "classnames";
 
 const FavoriteIconContainerStyle = css`
     display: block;
@@ -12,10 +12,11 @@ const FavoriteIconContainerDraggingStyle = css`
     border: 1px sold red;
 `;
 
-export function FavoritesIcon({type, title, icon, id}: FavoritesItem) {
-    const {setDragTarget} = useFavorites();
+export function FavoritesIcon({id, title, icon, type}: FavoritesItem) {
+    const {setDragTarget, favorites} = useFavorites();
     const [{isDragging}, drag] = useDrag(() => ({
         type,
+        canDrag: () => favorites.length > 0,
         collect(monitor) {
             return {
                 isDragging: monitor.isDragging()

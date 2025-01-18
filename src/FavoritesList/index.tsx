@@ -1,10 +1,11 @@
-import styled from "styled-components";
+
 import {DndProvider} from "react-dnd";
 import {HTML5Backend} from "react-dnd-html5-backend";
 import {FavoritesIcon} from "@root/FavoritesList/FavoritesIcon/index.";
 import {useFavorites} from "@root/FavoritesList/reducer";
 import {FavoritesIconCell} from "@root/FavoritesList/FavoritesIconCell";
 import {FavoritesAddForm} from "@root/FavoritesList/FavoritesAddForm";
+import {styled} from "@linaria/react";
 
 const Container = styled.div`
     display: grid;
